@@ -20,6 +20,7 @@ public class AndroidDriverHook {
 //    TakesScreenshot screenshot = AndroidDriverInit.driver;
 //    byte[] imageByte = screenshot.getScreenshotAs(OutputType.BYTES);
 //    scenario.attach(imageByte,"image/png",scenario.getId());
+    //error
     AndroidDriverInit.quit();
   }
 
