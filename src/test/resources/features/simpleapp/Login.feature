@@ -8,6 +8,8 @@ Feature: Login
     When user input password "admin"
     When user click button login
     Then user successfully login
+    When user go to list menu
+    When scroll list
 
   @negative
   Scenario: Verify user failed to login when input invalid email and password
