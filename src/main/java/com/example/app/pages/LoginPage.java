@@ -32,4 +32,6 @@ public class LoginPage extends BasePageObject {
         click(MobileBy.id("login"));
     }
 
+
+
 }
