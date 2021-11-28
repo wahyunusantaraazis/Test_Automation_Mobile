@@ -95,21 +95,33 @@ public class OperationSteps extends BaseTest {
 
     @Then("user succesfully calculate minus the numbers")
     public void userSuccesfullyCalculateMinusTheNumbers() {
-
+        //isDisplayed
+        boolean isDisplayed = operationPage.checkLabelHasil();
+        Assertions.assertTrue(isDisplayed);
     }
 
     @Then("user succesfully calculate times the numbers")
     public void userSuccesfullyCalculateTimesTheNumbers() {
-
+        //isDisplayed
+        boolean isDisplayed = operationPage.checkLabelHasil();
+        Assertions.assertTrue(isDisplayed);
     }
 
     @Then("user succesfully calculate divided the numbers")
     public void userSuccesfullyCalculateDividedTheNumbers() {
+        //isDisplayed
+        boolean isDisplayed = operationPage.checkLabelHasil();
+        Assertions.assertTrue(isDisplayed);
     }
 
     @Then("user succesfully calculate plus the numbers")
     public void userSuccesfullyCalculatePlusTheNumbers() {
+        //validate hasil calculate
         //String hasil = operationPage.getHasil();
         //Assertions.assertEquals("15", hasil);
+
+        //isDisplayed
+        boolean isDisplayed = operationPage.checkLabelHasil();
+        Assertions.assertTrue(isDisplayed);
     }
 }

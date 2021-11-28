@@ -2,7 +2,12 @@ package com.example.app.pages;
 
 import com.example.app.base.BasePageObject;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static com.example.app.drivers.AndroidDriverInit.driver;
 
 public class OperationPage extends BasePageObject {
 
@@ -38,6 +43,16 @@ public class OperationPage extends BasePageObject {
 
     public String getHasil(){
         return getText(MobileBy.id("tv_result"));
+    }
+
+    public boolean checkLabelHasil() {
+//    By locator = MobileBy.AccessibilityId("Open navigation drawer");
+//    AndroidElement hamburgerBtn = driver.findElement(locator);
+//    return hamburgerBtn.isDisplayed();
+        By locator = MobileBy.AccessibilityId("tv_result");
+        WebDriverWait wait = new WebDriverWait(driver,10,1000);
+        AndroidElement hamburgerBtn = (AndroidElement) wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        return hamburgerBtn.isDisplayed();
     }
 
 }
