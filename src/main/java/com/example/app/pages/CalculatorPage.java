@@ -26,8 +26,8 @@ public class CalculatorPage extends BasePageObject {
 //    return hamburgerBtn.isDisplayed();
       By locator = MobileBy.AccessibilityId("Open navigation drawer");
       WebDriverWait wait = new WebDriverWait(driver,10,1000);
-      AndroidElement hamburgerBtn = (AndroidElement) wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-      return hamburgerBtn.isDisplayed();
+      AndroidElement LabelHasil = (AndroidElement) wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+      return LabelHasil.isDisplayed();
   }
 
 
